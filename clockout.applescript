@@ -9,7 +9,7 @@ on run {input, parameters}
 		    if (All[i].getAttribute(attribute) == value) { return All[i]; }
 		  }
 		}
-		FindByAttributeValue("title","Clock In").click()" in document 1
+		FindByAttributeValue('title','Clock Out').click()" in document 1
 	end tell
 
 	return input
