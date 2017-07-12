@@ -3,7 +3,13 @@ on run {input, parameters}
 		activate
 		do JavaScript "document.getElementById('portal.login.logIn').click()" in document 1
 		delay 6
-		do JavaScript "document.getElementById('revit_form_ComboButton_1').focus()" in document 1
+		do JavaScript "function FindByAttributeValue(attribute, value)    {
+		  var All = document.getElementsByTagName('*');
+		  for (var i = 0; i < All.length; i++)       {
+		    if (All[i].getAttribute(attribute) == value) { return All[i]; }
+		  }
+		}
+		FindByAttributeValue("title","Clock In").click()" in document 1
 	end tell
 
 	return input
