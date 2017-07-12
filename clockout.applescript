@@ -1,6 +1,8 @@
 on run {input, parameters}
 	tell application "Safari"
+		open location "https://workforcenow.adp.com/public/login/wfnlogin.fcc"
 		activate
+		delay 2
 		do JavaScript "document.getElementById('portal.login.logIn').click()" in document 1
 		delay 6
 		do JavaScript "function FindByAttributeValue(attribute, value)    {
