@@ -12,5 +12,6 @@ tell application "Safari"
 		  }
 		}
 		FindByAttributeValue('title','Clock Out').click()" in document 1
+	delay 10
 	quit
 end tell
